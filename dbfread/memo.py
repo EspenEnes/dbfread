@@ -164,7 +164,9 @@ class DB4MemoFile(MemoFile):
         # Todo: fields are terminated in different ways.
         # \x1a is one of them
         # \x1f seems to be another (dbase_8b.dbt)
-        return data.split(b'\x1f', 1)[0]
+        # return data.split(b'\x1f', 1)[0]
+        return data
+
 
 
 def find_memofile(dbf_filename):
